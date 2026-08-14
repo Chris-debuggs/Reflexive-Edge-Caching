@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "targets": [
+      "ingestion_edge",
+      "inference_consumer"
+    ],
+    "ignore": [
+      ".*",
+      "node_modules"
+    ],
+    "source": "functions"
+  },
+  "circuits": {
+    "source": "circuits"
+  }
+}
