@@ -1,5 +1,0 @@
-{
-  "name": "ingestion_edge",
-  "type": "advancedio",
-  "stack": "node18"
-}
