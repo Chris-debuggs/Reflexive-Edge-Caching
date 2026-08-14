@@ -1,0 +1,21 @@
+{
+    "name": "ThreatOrchestrationCircuit",
+    "description": "Orchestrates storage of malicious log payloads based on inference results.",
+    "start": "StoreCacheSignature",
+    "states": {
+        "StoreCacheSignature": {
+            "type": "DataStore",
+            "operation": "insert",
+            "next": "DumpRawLogToStratus"
+        },
+        "DumpRawLogToStratus": {
+            "type": "Function",
+            "next": "CommitMetadataToDatastore"
+        },
+        "CommitMetadataToDatastore": {
+            "type": "DataStore",
+            "operation": "insert",
+            "end": true
+        }
+    }
+}
