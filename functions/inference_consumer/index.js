@@ -39,8 +39,6 @@ app.post('/process', async (req, res) => {
         
         console.log("QuickML Response:", JSON.stringify(inferenceResult));
         
-        // Here we would parse the result. If severity is high (>7), we trigger the Circuit.
-        // For demonstration, we check for a SEVERE tag to hook into APM.
         console.log("[SEVERE] Potential threat detected from inference!");
         
         res.status(200).json({ status: 'Processed', inference: inferenceResult });
